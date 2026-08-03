@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Family-run kitchen &amp; bath design studio in Snug Harbor, Duxbury, MA since 1997. Every project hand-drafted, full-perspective — Timeless Designs, Inc.">
+<title>Timeless Designs, Inc. | Kitchen &amp; Bath Design — Duxbury, MA</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Timeless Designs, Inc. | Kitchen &amp; Bath Design — Duxbury, MA">
+<meta property="og:description" content="Family-run kitchen &amp; bath design studio in Snug Harbor, Duxbury, MA since 1997. Every project hand-drafted, full-perspective.">
+<meta property="og:image" content="assets/images/storefront.jpg">
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  :root {
+    --ground: #E7E1D2;
+    --ground-2: #DCD3BE;
+    --panel: #F2ECDE;
+    --ink: #21252A;
+    --ink-soft: #4E534E;
+    --ink-faint: #8B8A78;
+    --accent: #8B6A34;
+    --accent-deep: #5F4A24;
+    --marsh: #4E5C58;
+    --line: #B6AC94;
+    --line-soft: #CFC6AE;
+
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --font-body: Optima, Candara, "Segoe UI", "Noto Sans", "Source Sans Pro", sans-serif;
+    --font-mono: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    color-scheme: light dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #15171A;
+      --ground-2: #1C1F22;
+      --panel: #1B1E20;
+      --ink: #ECE6D8;
+      --ink-soft: #B7AF9C;
+      --ink-faint: #6E7268;
+      --accent: #C79A4B;
+      --accent-deep: #E3B564;
+      --marsh: #7E8D84;
+      --line: #3A3D37;
+      --line-soft: #2C2F2A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #15171A;
+    --ground-2: #1C1F22;
+    --panel: #1B1E20;
+    --ink: #ECE6D8;
+    --ink-soft: #B7AF9C;
+    --ink-faint: #6E7268;
+    --accent: #C79A4B;
+    --accent-deep: #E3B564;
+    --marsh: #7E8D84;
+    --line: #3A3D37;
+    --line-soft: #2C2F2A;
+  }
+  :root[data-theme="light"] {
+    --ground: #E7E1D2;
+    --ground-2: #DCD3BE;
+    --panel: #F2ECDE;
+    --ink: #21252A;
+    --ink-soft: #4E534E;
+    --ink-faint: #8B8A78;
+    --accent: #8B6A34;
+    --accent-deep: #5F4A24;
+    --marsh: #4E5C58;
+    --line: #B6AC94;
+    --line-soft: #CFC6AE;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; }
+
+  .banner {
+    background: var(--ink);
+    color: var(--panel);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .banner span.dim { color: var(--accent); }
+
+  /* ---- shell: rail + main ---- */
+  .shell {
+    display: grid;
+    grid-template-columns: 15.5rem 1fr;
+    min-height: 100vh;
+  }
+  @media (max-width: 900px) {
+    .shell { grid-template-columns: 1fr; }
+  }
+
+  .rail {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    border-right: 1px solid var(--line);
+    padding: 2.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @media (max-width: 900px) {
+    .rail {
+      position: static;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--line);
+      padding: 1.25rem 1.25rem;
+    }
+  }
+
+  .mark-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .mark-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+  .mark-icon {
+    width: 2.1rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .mark small {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 0.4rem;
+  }
+
+  .index {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+  }
+  @media (max-width: 900px) {
+    .index {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.4rem;
+    }
+  }
+  .index li { margin: 0 0 0.9rem; white-space: nowrap; }
+  @media (max-width: 900px) { .index li { margin: 0; } }
+  .index a {
+    text-decoration: none;
+    color: var(--ink-faint);
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    transition: color 0.15s ease;
+  }
+  .index a:hover, .index a:focus-visible { color: var(--ink); }
+  .index a.active { color: var(--accent); }
+  .index .n { color: var(--accent); font-weight: 600; }
+  .index a.active .n { color: var(--accent); }
+
+  .rail-foot {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 900px) { .rail-foot { display: none; } }
+
+  main { min-width: 0; }
+
+  section {
+    padding: 6.5rem clamp(1.5rem, 6vw, 5rem);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  section.tight { padding-top: 4rem; padding-bottom: 4rem; }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1.4rem;
+  }
+  .eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  /* ---- 01 foreword / hero ---- */
+  #s01 { padding: 0; border-bottom: 1px solid var(--line); }
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: flex-end;
+    background: var(--ink);
+  }
+  .hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(28%) sepia(8%) contrast(1.02);
+    opacity: 0.88;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(21,23,26,0.05) 0%, rgba(21,23,26,0.15) 45%, rgba(21,23,26,0.86) 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: clamp(2rem, 6vw, 4rem);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .hero h1 {
+    color: #F2ECDE;
+    font-size: clamp(2.6rem, 6.4vw, 5.4rem);
+    line-height: 0.98;
+    max-width: 15ch;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent-deep);
+  }
+  .hero-meta {
+    font-family: var(--font-mono);
+    color: #CFC6AE;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    line-height: 2;
+    text-align: right;
+    border-left: 1px solid rgba(207,198,174,0.35);
+    padding-left: 1.5rem;
+  }
+  .hero-meta .num { color: var(--accent-deep); }
+
+  /* ---- 02 practice ---- */
+  .practice-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media (max-width: 800px) { .practice-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+  .lede {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    line-height: 1.4;
+    max-width: 24ch;
+    margin: 0 0 1.75rem;
+  }
+  .body-col p {
+    max-width: 60ch;
+    color: var(--ink-soft);
+    margin: 0 0 1.1rem;
+  }
+  .body-col p:last-child { margin-bottom: 0; }
+
+  .photo-panel {
+    margin: 0;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 1.75rem;
+  }
+  .photo-panel img {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--line);
+    filter: grayscale(12%);
+  }
+
+  .spec {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 1.75rem;
+  }
+  .spec figure { margin: 0 0 1.25rem; }
+  .spec img {
+    width: 100%;
+    display: block;
+    filter: grayscale(15%);
+    border: 1px solid var(--line);
+  }
+  .spec figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .spec dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .spec dt {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    align-self: baseline;
+  }
+  .spec dd { margin: 0; color: var(--ink-soft); }
+
+  /* ---- galleries (03,04,05) ---- */
+  .gal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 2.75rem;
+    flex-wrap: wrap;
+  }
+  .gal-head h2 { font-size: clamp(2rem, 4vw, 3.1rem); }
+  .gal-head p {
+    max-width: 34ch;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+  }
+  .gallery figure { margin: 0; }
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(12%);
+  }
+  .gallery figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--ink-faint);
+    margin-top: 0.55rem;
+  }
+  .gallery figcaption b { color: var(--accent); font-weight: 600; }
+
+  .g-a { grid-column: span 7; }
+  .g-b { grid-column: span 5; }
+  .g-c { grid-column: span 5; }
+  .g-d { grid-column: span 7; }
+  @media (max-width: 750px) {
+    .g-a, .g-b, .g-c, .g-d { grid-column: span 12; }
+  }
+  .g-a img, .g-c img { aspect-ratio: 4/3; }
+  .g-b img, .g-d img { aspect-ratio: 5/4; }
+
+  .mini-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  @media (max-width: 750px) { .mini-row { grid-template-columns: 1fr 1fr; } }
+  .mini-row img { aspect-ratio: 1/1; }
+
+  /* ---- 06 testimonials ---- */
+  .notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  @media (max-width: 850px) { .notes { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .note {
+    border-left: 2px solid var(--accent);
+    padding-left: 1.4rem;
+  }
+  .note p {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
+  .note cite {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ---- 07 partners ---- */
+  .partners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 750px) { .partners { grid-template-columns: 1fr; } }
+  .partner {
+    background: var(--ground);
+    padding: 2.5rem;
+  }
+  .partner h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  .partner .role {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 1.1rem;
+  }
+  .partner p { color: var(--ink-soft); max-width: 46ch; margin: 0; }
+  .partner-logo {
+    display: block;
+    max-width: 200px;
+    height: auto;
+    margin-top: 1.75rem;
+  }
+
+  /* ---- 08 commission ---- */
+  .commission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  @media (max-width: 800px) { .commission { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .commission h2 { font-size: clamp(2rem, 4vw, 3rem); max-width: 12ch; }
+  .commission .lede { margin-top: 1.5rem; }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+  }
+  .contact-btn {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 0.7rem 1.1rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .contact-btn:hover, .contact-btn:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    outline: none;
+  }
+
+  .field {
+    border: none;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.85rem 0.1rem;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    transition: border-color 0.15s ease;
+  }
+  .field::placeholder { color: var(--ink-faint); }
+  .field:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .field-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    margin-bottom: 0.5rem;
+  }
+  .submit {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--panel);
+    border: 1px solid var(--ink);
+    padding: 0.95rem 1.8rem;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .submit:hover, .submit:focus-visible {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #16181A;
+    outline: none;
+  }
+  .submit:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
+
+  .form-note {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    margin: 1rem 0 0;
+    min-height: 1em;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .form-note.show { opacity: 1; transform: none; }
+  .form-note.ok { color: var(--marsh); }
+  .form-note.err { color: #a3423a; }
+  @media (prefers-color-scheme: dark) { .form-note.err { color: #d9776e; } }
+  :root[data-theme="dark"] .form-note.err { color: #d9776e; }
+  :root[data-theme="light"] .form-note.err { color: #a3423a; }
+
+  /* ---- 10 directions ---- */
+  .directions-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+  @media (max-width: 800px) { .directions-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .dir-block + .dir-block { margin-top: 1.85rem; }
+  .dir-block .k {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .dir-block p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .map-frame {
+    border: 1px solid var(--line);
+    overflow: hidden;
+    min-height: 380px;
+  }
+  .map-frame iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    display: block;
+    border: 0;
+    filter: grayscale(20%) contrast(1.02);
+  }
+
+  /* ---- 11 title block / footer ---- */
+  #s11 { border-bottom: none; padding-bottom: 3rem; }
+  .titleblock {
+    border: 1px solid var(--line);
+  }
+  .tb-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 750px) { .tb-row { grid-template-columns: 1fr 1fr; } }
+  .tb-cell {
+    padding: 1.4rem 1.6rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+  }
+  .tb-cell:last-child { border-right: none; }
+  .tb-cell .k {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .tb-cell .v {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+  }
+  .tb-big {
+    grid-column: 1 / -1;
+    padding: 2.2rem 1.6rem;
+    border-bottom: none;
+  }
+  .tb-big .v { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+
+  .fine {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--ink-faint);
+    text-align: center;
+    margin-top: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+ <span>TIMELESS DESIGNS INC.</span></span>
+  <span>Fine Cabinetry For Your Kitchen and Bath</span>
+</div>
+
+<div class="shell">
+  <nav class="rail">
+    <div>
+      <div class="mark">
+        <div class="mark-row">
+          <div class="mark-title">Timeless<br>Designs</div>
+          <img class="mark-icon" src="assets/images/column-icon.png" alt="">
+        </div>
+        <small>Est. 1997 · Duxbury, Mass.</small>
+      </div>
+      <ul class="index" id="railIndex">
+        <li><a href="#s01" data-n="01"><span class="n">01</span> Foreword</a></li>
+        <li><a href="#s02" data-n="02"><span class="n">02</span> About Us</a></li>
+        <li><a href="#s03" data-n="03"><span class="n">03</span> The Practice</a></li>
+        <li><a href="#s04" data-n="04"><span class="n">04</span> Kitchens</a></li>
+        <li><a href="#s05" data-n="05"><span class="n">05</span> Baths</a></li>
+        <li><a href="#s06" data-n="06"><span class="n">06</span> Built-Ins</a></li>
+        <li><a href="#s07" data-n="07"><span class="n">07</span> Testimonials</a></li>
+        <li><a href="#s08" data-n="08"><span class="n">08</span> Materials &amp; Partners</a></li>
+        <li><a href="#s09" data-n="09"><span class="n">09</span> Commission</a></li>
+        <li><a href="#s10" data-n="10"><span class="n">10</span> Directions</a></li>
+      </ul>
+    </div>
+    <div class="rail-foot">
+      SNUG HARBOR<br>
+      459 WASHINGTON ST<br>
+      DUXBURY, MA 02332<br>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="s01">
+      <div class="hero">
+        <img src="assets/images/hero-kitchen-gray.jpg" alt="">
+        <div class="hero-content">
+          <h1>Rooms drawn<br>by <em>hand</em>,<br>built to last.</h1>
+          <div class="hero-meta"> Timeless Designs<br>
+            SNUG HARBOR, DUXBURY MA
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="s02">
+      <div class="eyebrow">02 — About Us</div>
+      <div class="practice-grid">
+        <div>
+          <p class="lede reveal">Timeless Designs, INC.</p>
+          <div class="body-col">
+            <p>Nestled in a charming historic wood-frame building in Duxbury's picturesque
+              Snug Harbor, Timeless Designs perfectly embodies the serene, small-town
+              elegance of its surroundings.</p>
+            <p>Founded in 1997 by Scott and Erin Kulda, this family-run business
+              has thrived as a true mom-and-pop operation—quietly building its
+              reputation the traditional way: one satisfied client at a time.</p>
+          </div>
+        </div>
+        <figure class="photo-panel reveal">
+          <img src="assets/images/storefront.jpg" alt="Timeless Designs storefront in Snug Harbor, Duxbury MA">
+        </figure>
+      </div>
+    </section>
+
+    <section id="s03">
+      <div class="eyebrow">03 — The Practice</div>
+      <div class="practice-grid">
+        <div>
+          <p class="lede reveal">Craftsmanship, <br>Pride in Our Work, <br>Loyalty to Our Customer</p>
+          <div class="body-col">
+            <p>Timeless Designs has three full-time kitchen and bath designers on staff, 
+              each of whom has roughly twenty years experience in the business. 
+              That is a remarkable level of expertise that one would be hard-pressed 
+              to find at other kitchen and baths design outlets, but the designers, 
+              approach to the design process is even more rare.</p><br>
+            <p>Timeless Designs uses only hand-drawn plans and renderings, and every 
+              designer drafts architectural-quality drawings in full perspective for 
+              each of their projects.</p>
+          </div>
+        </div>
+        <div class="spec reveal">
+          <figure>
+            <img src="assets/images/photo2010-640x464.jpg" alt="White oak kitchen island with pendant lighting and marble countertop">
+            <!--<figcaption><span>FIG. 01 — ISLAND, WHITE OAK</span></figcaption>-->
+          </figure>
+          <dl>
+            <dt>Founded</dt><dd>1997, Scott &amp; Erin Kulda</dd>
+            <dt>Studio</dt><dd>Family-run, three principal designers</dd>
+            <dt>Method</dt><dd>Hand-drafted plans &amp; full-perspective renderings</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="s04">
+      <div class="eyebrow">04 — Kitchens</div>
+      <div class="gal-head">
+        <h2>Kitchens</h2>
+      </div>
+      <div class="gallery reveal">
+        <figure class="g-a">
+          <img src="assets/images/kitchen-teal-stools.jpg" alt="White kitchen with marble herringbone backsplash, brass pendant lights, and teal upholstered stools">
+          <figcaption><b>Marshfield</b> · marble herringbone, brass pendants</figcaption>
+        </figure>
+        <figure class="g-b">
+          <img src="assets/images/kitchen-blue-tile.jpg" alt="Kitchen with granite island, blue glass tile backsplash, and a view of the backyard gazebo">
+          <figcaption><b>Duxbury</b> · granite island, glass tile backsplash</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="s05">
+      <div class="eyebrow">05 — Baths</div>
+      <div class="gal-head">
+        <h2>Bathrooms</h2>
+      </div>
+      <div class="gallery reveal">
+        <figure class="g-c">
+          <img src="assets/images/bath202-700x934.jpg" alt="White double vanity bathroom with marble backsplash and sconce lighting">
+          <figcaption><b>Hingham</b> · double vanity, nickel fittings</figcaption>
+        </figure>
+        <figure class="g-d">
+          <img src="assets/images/bath-espresso-vanity.jpg" alt="Espresso wood vanity with mosaic tile backsplash and a soaking tub">
+          <figcaption><b>Marshfield</b> · espresso vanity, mosaic tile</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="s06">
+      <div class="eyebrow">06 — Built-Ins</div>
+      <div class="gal-head">
+        <h2>Built-Ins</h2>
+      </div>
+      <div class="gallery reveal">
+        <figure class="g-a">
+          <img src="assets/images/photo27-800x1067.jpg" alt="Built-in desk nook flanked by white pantry cabinets, with a leaded-glass cabinet above">
+          <figcaption><b>Duxbury</b> · leaded-glass china cabinet</figcaption>
+        </figure>
+        <figure class="g-b">
+          <img src="assets/images/photo31-640x480.jpg" alt="White built-in hutch and desk with glass cabinet doors">
+          <figcaption><b>Hingham</b> · built-in hutch &amp; desk, glass cabinetry</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="s07">
+      <div class="eyebrow">07 — Testimonials</div>
+      <div class="notes reveal">
+        <div class="note">
+          <p>"Our Kitchen turned out perfect. Thanks to you and your staff for all their support." </p>
+          <cite>— Fred, Duxbury, MA</cite>
+        </div>
+        <div class="note">
+          <p>"We love our Kitchen! Your design exceeded our needs. 
+            I so enjoy entertaining as it is so much easier than it used to be"</p>
+          <cite>Laurie, Hingham, MA</cite>
+        </div>
+        <div class="note">
+          <p>"Thank you so much for making my Kitchen dream come true". </p>
+          <cite>— Amy, Marshfield, MA</cite>
+        </div>
+      </div>
+    </section>
+
+    <section id="s08">
+      <div class="eyebrow">08 — Materials &amp; Partners</div>
+      <div class="partners reveal">
+        <div class="partner">
+          <h3>Dover Woods</h3><br>
+          <p> For over 25 years, Dover Woods Cabinetry has built its 
+            reputation as a leader in manufacturing and wholesale distribution 
+            of quality cabinetry products &amp; accessories. </p><br>
+          <p>Through innovation, superior craftsmanship and a relentless
+            commitment to client satisfaction, the company has 
+            evolved to become a valued member of our team.  
+            Their production facilities enable us to efficiently 
+            serve our growing clientele of home owners, and builders.</p><br>
+          <p>Whether your cabinetry needs are residential or commercial,
+            they manufacture a diverse and quality assured line of finished
+            and pre-assembled products for your needs.<br>&nbsp;</p>
+          <img class="partner-logo" src="assets/images/dover-logo.png" alt="Dover Woods Cabinetry logo">
+        </div>
+        <div class="partner">
+          <h3>Tedd Wood</h3><br>
+          <p>Tedd Wood Fine Custom Cabinetry offers several lines of cabinetry, 
+            so our customers will be  sure to find the style and functionality 
+            that will fit your budget. Tedd Wood is dedicated to environmental 
+            stewardship and has a complete line of green custom cabinetry. </p><br>
+          <p>Whether you’re refurbishing a 200-year-old farmhouse or 
+            building a sleek new contemporary, Tedd Wood can design cabinetry 
+            to suit your style. With more than one hundred door styles to choose 
+            from and a complete selection of stains, paints and finishes, the 
+            variations are endless. For kitchen, bath, bedroom, home office – 
+            anywhere you want the look of fine furniture – Tedd Wood and the 
+            Timeless Designs team is one of the best values in custom cabinetry
+            on the market today.</p>
+          <img class="partner-logo" src="assets/images/tedd-wood-logo.png" alt="Tedd Wood Fine Custom Cabinetry logo">
+        </div>
+      </div>
+    </section>
+
+    <section id="s09">
+      <div class="eyebrow">09 — Commission</div>
+      <div class="commission">
+        <div>
+          <h2 class="reveal">Let's bring your vision to life.</h2>
+          <p class="lede reveal" style="font-size:1.05rem; max-width:38ch; margin-top:1.25rem;">Ready to start your design journey?
+            Whether you’re refreshing a single room or planning a full renovation, I’d love to hear about your project.</p>
+          <div class="contact-actions reveal">
+            <a class="contact-btn" href="tel:+17819349537">Call (781) 934-9537</a>
+            <a class="contact-btn" href="mailto:info@timelessdesignsinc.com">Email Us</a>
+          </div>
+        </div>
+        <form class="reveal" id="commission-form" action="https://formsubmit.co/kellycosty@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from Timeless Designs website">
+          <input type="hidden" name="_template" value="table">
+          <label class="field-label" for="field-name">Name</label>
+          <input class="field" id="field-name" name="name" type="text" placeholder="Your name" required>
+          <label class="field-label" for="field-phone">Phone</label>
+          <input class="field" id="field-phone" name="phone" type="text" placeholder="(781) 000-0000">
+          <label class="field-label" for="field-project">Project</label>
+          <input class="field" id="field-project" name="project" type="text" placeholder="Kitchen, bath, built-in…">
+          <button class="submit" type="submit">Submit</button>
+          <p class="form-note" id="commission-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="s10">
+      <div class="eyebrow">10 — Directions</div>
+      <div class="directions-grid">
+        <div>
+          <div class="dir-block">
+            <span class="k">Store Address</span>
+            <p>459 Washington St<br>Duxbury, MA 02332<br>781-934-9537</p>
+          </div>
+          <div class="dir-block">
+            <span class="k">Mailing Address</span>
+            <p>P.O. Box 1772<br>Duxbury, MA 02331</p>
+          </div>
+          <div class="dir-block">
+            <span class="k">Store Hours</span>
+            <p>Monday through Friday, 9:00 AM – 5:00 PM<br>Saturday, 9:00 AM til Noon<br>Also available Evenings and Saturday by appointment</p>
+          </div>
+        </div>
+        <div class="map-frame reveal">
+          <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDbnCmnHmtigIYiD8jIfeHQv7gW2ANhHD4&amp;q=Timeless+Designs%2C+Inc.%2C+459+Washington+Street%2C+Duxbury%2C+MA+02332" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="s11">
+      <div class="eyebrow"></div>
+      <div class="titleblock reveal">
+        <div class="tb-row">
+          <div class="tb-cell tb-big">
+            <span class="k">Company</span>
+            <span class="v">Timeless Designs, INC.</span>
+          </div>
+        </div>
+        <div class="tb-row">
+          <div class="tb-cell"><span class="k">Location</span><span class="v">Duxbury MA</span></div>
+          <div class="tb-cell"><span class="k">Established</span><span class="v">1997</span></div>
+          <div class="tb-cell"><span class="k">Founders</span><span class="v">Scott and Erin Kulda</span></div>
+        </div>
+      </div>
+      <p class="fine">© 2026 TIMELESS DESIGNS, INC. — ALL RIGHTS RESERVED<br><!--Designed by Kelly Costello--></p>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.index a'));
+    var sections = links.map(function (a) {
+      return document.querySelector(a.getAttribute('href'));
+    });
+
+    function onScroll() {
+      var pos = window.scrollY + window.innerHeight * 0.3;
+      var activeIdx = 0;
+      sections.forEach(function (s, i) {
+        if (s && s.offsetTop <= pos) activeIdx = i;
+      });
+      links.forEach(function (a, i) {
+        a.classList.toggle('active', i === activeIdx);
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var reveals = document.querySelectorAll('.reveal');
+    if (reduced || !('IntersectionObserver' in window)) {
+      reveals.forEach(function (el) { el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { io.observe(el); });
+    }
+  })();
+
+  (function () {
+    var form = document.getElementById('commission-form');
+    var note = document.getElementById('commission-note');
+    var button = form.querySelector('.submit');
+    if (!form || !note || !button) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      button.disabled = true;
+      var originalLabel = button.textContent;
+      button.textContent = 'Sending…';
+      note.className = 'form-note';
+      note.textContent = '';
+
+      var ajaxAction = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+      fetch(ajaxAction, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        return response.json().catch(function () { return null; }).then(function (data) {
+          var success = data && (data.success === true || data.success === 'true');
+          if (!response.ok || !success) {
+            throw new Error((data && data.message) || 'submit failed');
+          }
+        });
+      }).then(function () {
+        form.reset();
+        note.textContent = 'Thank you — your message has been sent. We’ll be in touch soon.';
+        note.className = 'form-note ok show';
+      }).catch(function (err) {
+        console.error('Commission form submit failed:', err);
+        note.textContent = 'Something went wrong. Please try again, or call us directly.';
+        note.className = 'form-note err show';
+      }).finally(function () {
+        button.disabled = false;
+        button.textContent = originalLabel;
+      });
+    });
+  })();
+</script>
+</body>
+</html>
