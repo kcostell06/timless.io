@@ -409,15 +409,83 @@
   }
   .gallery figcaption b { color: var(--accent); font-weight: 600; }
 
-  .g-a { grid-column: span 7; }
-  .g-b { grid-column: span 5; }
-  .g-c { grid-column: span 5; }
-  .g-d { grid-column: span 7; }
+  .g-a, .g-b, .g-c, .g-d { grid-column: span 6; }
   @media (max-width: 750px) {
     .g-a, .g-b, .g-c, .g-d { grid-column: span 12; }
   }
-  .g-a img, .g-c img { aspect-ratio: 4/3; }
-  .g-b img, .g-d img { aspect-ratio: 5/4; }
+  .g-a .slideshow, .g-b .slideshow, .g-c .slideshow, .g-d .slideshow { aspect-ratio: 4/3; }
+
+  /* ---- gallery slideshows ---- */
+  .slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--panel);
+  }
+  .slideshow img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(12%);
+    opacity: 0;
+    transition: opacity 1.1s ease;
+  }
+  .slideshow img.active { opacity: 1; }
+
+  /* ---- shared carousel controls (one pair of arrows + dots per gallery) ---- */
+  .carousel { position: relative; }
+  .c-arrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  .c-arrow:hover, .c-arrow:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    outline: none;
+  }
+  .c-arrow.prev { left: -1.25rem; }
+  .c-arrow.next { right: -1.25rem; }
+  @media (max-width: 900px) {
+    .c-arrow.prev { left: 0.4rem; }
+    .c-arrow.next { right: 0.4rem; }
+  }
+  .c-dots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 1.75rem;
+  }
+  .c-dots .dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  }
+  .c-dots .dot.active { background: var(--accent); border-color: var(--accent); transform: scale(1.35); }
 
   .mini-row {
     display: grid;
@@ -774,8 +842,7 @@
         </div>
         <div class="spec reveal">
           <figure>
-            <img src="assets/images/photo2010-640x464.jpg" alt="White oak kitchen island with pendant lighting and marble countertop">
-            <!--<figcaption><span>FIG. 01 — ISLAND, WHITE OAK</span></figcaption>-->
+            <img src="assets/images/PracticePhoto.jpg" alt="White oak kitchen island with pendant lighting and marble countertop">
           </figure>
           <dl>
             <dt>Founded</dt><dd>1997, Scott &amp; Erin Kulda</dd>
@@ -791,15 +858,52 @@
       <div class="gal-head">
         <h2>Kitchens</h2>
       </div>
-      <div class="gallery reveal">
-        <figure class="g-a">
-          <img src="assets/images/kitchen-teal-stools.jpg" alt="White kitchen with marble herringbone backsplash, brass pendant lights, and teal upholstered stools">
-          <figcaption><b>Marshfield</b> · marble herringbone, brass pendants</figcaption>
-        </figure>
-        <figure class="g-b">
-          <img src="assets/images/kitchen-blue-tile.jpg" alt="Kitchen with granite island, blue glass tile backsplash, and a view of the backyard gazebo">
-          <figcaption><b>Duxbury</b> · granite island, glass tile backsplash</figcaption>
-        </figure>
+      <div class="carousel reveal" data-carousel>
+        <button type="button" class="c-arrow prev" aria-label="Previous photos">&#8249;</button>
+        <div class="gallery">
+          <figure class="g-a c-slot">
+            <div class="slideshow"><img alt=""><img alt=""></div>
+            <figcaption></figcaption>
+          </figure>
+          <figure class="g-b c-slot">
+            <div class="slideshow"><img alt=""><img alt=""></div>
+            <figcaption></figcaption>
+          </figure>
+        </div>
+        <button type="button" class="c-arrow next" aria-label="Next photos">&#8250;</button>
+        <div class="c-dots"></div>
+        <ul class="c-slides" hidden>
+          <li>
+            <img src="assets/images/Kitchen1.jpg" alt="White kitchen with tile backsplash, pendant lights, and stools">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen2.jpg" alt="Kitchen with white island, blue glass tile backsplash, and teal chairs">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen3.PNG" alt="Kitchen with white marble island, and christmas decorations">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen4.jpg" alt="Kitchen with white marble island and backplash, and stainless steel appliances">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen5.jpeg" alt="Kitchen with white table, wood cabinets and black appliances">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen6.jpeg" alt="Kitchen with white table, wood cabinets and black appliances">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen7.jpg" alt="Second image of kitchen with white table, wood cabinets and black appliances">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen8.jpeg" alt="Kitchen with granite counter and wood cabinets">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen9.jpg" alt="Kitchen with granite counter and grey cabinets">
+          </li>
+          <li>
+            <img src="assets/images/Kitchen10.jpg" alt="Kitchen with granite counter, grey tile backsplash, and grey cabinets">
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -808,15 +912,28 @@
       <div class="gal-head">
         <h2>Bathrooms</h2>
       </div>
-      <div class="gallery reveal">
-        <figure class="g-c">
-          <img src="assets/images/bath202-700x934.jpg" alt="White double vanity bathroom with marble backsplash and sconce lighting">
-          <figcaption><b>Hingham</b> · double vanity, nickel fittings</figcaption>
-        </figure>
-        <figure class="g-d">
-          <img src="assets/images/bath-espresso-vanity.jpg" alt="Espresso wood vanity with mosaic tile backsplash and a soaking tub">
-          <figcaption><b>Marshfield</b> · espresso vanity, mosaic tile</figcaption>
-        </figure>
+      <div class="carousel reveal" data-carousel>
+        <button type="button" class="c-arrow prev" aria-label="Previous photos">&#8249;</button>
+        <div class="gallery">
+          <figure class="g-c c-slot">
+            <div class="slideshow"><img alt=""><img alt=""></div>
+            <figcaption></figcaption>
+          </figure>
+          <figure class="g-d c-slot">
+            <div class="slideshow"><img alt=""><img alt=""></div>
+            <figcaption></figcaption>
+          </figure>
+        </div>
+        <button type="button" class="c-arrow next" aria-label="Next photos">&#8250;</button>
+        <div class="c-dots"></div>
+        <ul class="c-slides" hidden>
+          <li>
+            <img src="assets/images/Bath1.jpg" alt="White double vanity bathroom with marble backsplash and sconce lighting">
+          </li>
+          <li>
+            <img src="assets/images/Bath2.jpg" alt="Espresso wood vanity with mosaic tile backsplash and a soaking tub">
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -825,15 +942,28 @@
       <div class="gal-head">
         <h2>Built-Ins</h2>
       </div>
-      <div class="gallery reveal">
-        <figure class="g-a">
-          <img src="assets/images/photo27-800x1067.jpg" alt="Built-in desk nook flanked by white pantry cabinets, with a leaded-glass cabinet above">
-          <figcaption><b>Duxbury</b> · leaded-glass china cabinet</figcaption>
-        </figure>
-        <figure class="g-b">
-          <img src="assets/images/photo31-640x480.jpg" alt="White built-in hutch and desk with glass cabinet doors">
-          <figcaption><b>Hingham</b> · built-in hutch &amp; desk, glass cabinetry</figcaption>
-        </figure>
+      <div class="carousel reveal" data-carousel>
+        <button type="button" class="c-arrow prev" aria-label="Previous photos">&#8249;</button>
+        <div class="gallery">
+          <figure class="g-a c-slot">
+            <div class="slideshow"><img alt=""><img alt=""></div>
+            <figcaption></figcaption>
+          </figure>
+          <figure class="g-b c-slot">
+            <div class="slideshow"><img alt=""><img alt=""></div>
+            <figcaption></figcaption>
+          </figure>
+        </div>
+        <button type="button" class="c-arrow next" aria-label="Next photos">&#8250;</button>
+        <div class="c-dots"></div>
+        <ul class="c-slides" hidden>
+          <li>
+            <img src="assets/images/BuiltIn1.jpg" alt="Built-in desk nook flanked by white pantry cabinets, with a leaded-glass cabinet above">
+          </li>
+          <li>
+            <img src="assets/images/BuiltIn2.jpg" alt="White built-in hutch and desk with glass cabinet doors">
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -999,6 +1129,96 @@
       }, { threshold: 0.15 });
       reveals.forEach(function (el) { io.observe(el); });
     }
+  })();
+
+  (function () {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var intervalMs = 5000;
+
+    document.querySelectorAll('.carousel').forEach(function (root) {
+      var dataList = root.querySelector('.c-slides');
+      if (!dataList) return;
+
+      var slides = Array.prototype.slice.call(dataList.children).map(function (li) {
+        var img = li.querySelector('img');
+        var cap = li.querySelector('figcaption');
+        return {
+          src: img ? img.getAttribute('src') : '',
+          alt: img ? (img.getAttribute('alt') || '') : '',
+          captionHTML: cap ? cap.innerHTML : ''
+        };
+      });
+      if (slides.length === 0) return;
+
+      var slots = Array.prototype.slice.call(root.querySelectorAll('.c-slot'));
+      var slotActiveImg = slots.map(function () { return 0; });
+      var start = 0;
+
+      var dotsWrap = root.querySelector('.c-dots');
+      var dots = slides.map(function (slide, i) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Show photo ' + (i + 1) + ' of ' + slides.length);
+        dot.addEventListener('click', function () {
+          render(i, true);
+          resetTimer();
+        });
+        dotsWrap.appendChild(dot);
+        return dot;
+      });
+
+      function render(newStart, animate) {
+        start = ((newStart % slides.length) + slides.length) % slides.length;
+        slots.forEach(function (slot, i) {
+          var slide = slides[(start + i) % slides.length];
+          var imgs = slot.querySelectorAll('.slideshow img');
+          var cap = slot.querySelector('figcaption');
+          var activeIdx = slotActiveImg[i];
+          var showImg = imgs[activeIdx];
+          var hideImg = imgs[1 - activeIdx];
+
+          if (animate && slides.length > 1) {
+            hideImg.src = slide.src;
+            hideImg.alt = slide.alt;
+            requestAnimationFrame(function () {
+              hideImg.classList.add('active');
+              showImg.classList.remove('active');
+            });
+            slotActiveImg[i] = 1 - activeIdx;
+          } else {
+            showImg.src = slide.src;
+            showImg.alt = slide.alt;
+            showImg.classList.add('active');
+          }
+          cap.innerHTML = slide.captionHTML;
+        });
+        dots.forEach(function (dot, i) { dot.classList.toggle('active', i === start); });
+      }
+
+      render(0, false);
+
+      var prevBtn = root.querySelector('.c-arrow.prev');
+      var nextBtn = root.querySelector('.c-arrow.next');
+      prevBtn.addEventListener('click', function () {
+        render(start - 1, true);
+        resetTimer();
+      });
+      nextBtn.addEventListener('click', function () {
+        render(start + 1, true);
+        resetTimer();
+      });
+
+      var timer;
+      function resetTimer() {
+        clearInterval(timer);
+        if (reduced || slides.length < 2) return;
+        timer = setInterval(function () {
+          render(start + 1, true);
+        }, intervalMs);
+      }
+      resetTimer();
+    });
   })();
 
   (function () {
