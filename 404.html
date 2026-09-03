@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page Not Found — Timeless Designs, Inc.</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  :root {
+    --ground: #E7E1D2;
+    --panel: #F2ECDE;
+    --ink: #21252A;
+    --ink-soft: #4E534E;
+    --ink-faint: #8B8A78;
+    --accent: #8B6A34;
+    --line: #B6AC94;
+
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    --font-body: Optima, Candara, "Segoe UI", "Noto Sans", "Source Sans Pro", sans-serif;
+    --font-mono: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #15171A;
+      --panel: #1B1E20;
+      --ink: #ECE6D8;
+      --ink-soft: #B7AF9C;
+      --ink-faint: #6E7268;
+      --accent: #C79A4B;
+      --line: #3A3D37;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #15171A; --panel: #1B1E20; --ink: #ECE6D8;
+    --ink-soft: #B7AF9C; --ink-faint: #6E7268; --accent: #C79A4B; --line: #3A3D37;
+  }
+  :root[data-theme="light"] {
+    --ground: #E7E1D2; --panel: #F2ECDE; --ink: #21252A;
+    --ink-soft: #4E534E; --ink-faint: #8B8A78; --accent: #8B6A34; --line: #B6AC94;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a { color: inherit; }
+
+  .banner {
+    background: var(--ink);
+    color: var(--panel);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  @media (prefers-color-scheme: dark) { .banner { color: var(--ink); } }
+  :root[data-theme="dark"] .banner { color: var(--ink); }
+
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2.5rem, 8vw, 6rem) clamp(1.5rem, 6vw, 5rem);
+  }
+
+  .sheet {
+    max-width: 34rem;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.69rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1.75rem;
+  }
+  .eyebrow::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .code {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(4rem, 16vw, 8rem);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+  .code em { color: var(--accent); font-style: normal; }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.4rem, 3.4vw, 2rem);
+    line-height: 1.25;
+    margin: 1.4rem 0 0.9rem;
+  }
+
+  p {
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 2rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+  }
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 0.69rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    padding: 0.7rem 1.1rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover, .btn:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    outline: none;
+  }
+
+  .titleblock {
+    border: 1px solid var(--line);
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: var(--font-mono);
+  }
+  @media (max-width: 520px) { .titleblock { grid-template-columns: 1fr 1fr; } }
+  .tb-cell {
+    padding: 0.9rem 1rem;
+    border-right: 1px solid var(--line);
+  }
+  .tb-cell:last-child { border-right: none; }
+  .tb-cell .k {
+    display: block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.3rem;
+  }
+  .tb-cell .v { font-size: 0.8rem; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <span>TIMELESS DESIGNS INC.</span>
+  <span>Fine Cabinetry For Your Kitchen and Bath</span>
+</div>
+
+<main>
+  <div class="sheet">
+    <div class="eyebrow">Error 404 — Sheet Not Found</div>
+    <p class="code"><em>4</em>04</p>
+    <h1>This page isn&rsquo;t on the plan.</h1>
+    <p>The drawing you asked for doesn&rsquo;t exist here&mdash;it may have been moved,
+      renamed, or never drafted at all. Let&rsquo;s get you back to the front page.</p>
+    <div class="actions">
+      <a class="btn" href="/">Return Home</a>
+      <a class="btn" href="/#s09">Start a Commission</a>
+      <a class="btn" href="tel:+17819349537">Call (781) 934-9537</a>
+    </div>
+    <div class="titleblock">
+      <div class="tb-cell"><span class="k">Studio</span><span class="v">Duxbury, MA</span></div>
+      <div class="tb-cell"><span class="k">Established</span><span class="v">1997</span></div>
+      <div class="tb-cell"><span class="k">Status</span><span class="v">Page missing</span></div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
